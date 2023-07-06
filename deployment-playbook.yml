@@ -7,7 +7,7 @@
   gather_facts: false
 
   tasks:
-    - name: Enable EPEL Repository on CentOS 7
+    - name: Enable EPEL Repository on CentOS7
       yum:
         name: epel-release
         state: latest
