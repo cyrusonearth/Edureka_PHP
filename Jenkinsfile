@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Docker Build'){
             steps{
-                sh "docker build . -t arkacyrus/my-php-website"
+                sh "docker build . -t arkacyrus/edureka-php-website"
             }
         }
         stage('DockerHub Push'){
@@ -19,7 +19,7 @@ pipeline {
                       sh "docker login -u arkacyrus -p ${dockerPwd}"
                 }
                 
-                sh "docker push arkacyrus/my-php-website "
+                sh "docker push arkacyrus/edureka-php-website:latest"
             }
         }
         stage('Install Python 3') {
